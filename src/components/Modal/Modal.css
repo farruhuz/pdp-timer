@@ -1,0 +1,38 @@
+.modal {
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.modal-body input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  margin: 5px 0px;
+  border: 1px solid rgb(202, 202, 202);
+}
+.modal-button {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.modal-button button {
+  padding: 10px 20px;
+  font-weight: 600;
+  margin: 5px;
+  
+}
+
