@@ -26,7 +26,7 @@ const Clock = ({ timerHour, timerMinut, timerSecond, changeHandler, playHas, has
   return (
     <>
       <section className="timer-container">
-        <h2>Time countdown</h2>
+        <h2>PDP University</h2>
         <section className="timer">
           <div className="clock">
             <section>
