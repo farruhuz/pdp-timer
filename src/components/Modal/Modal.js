@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Modal.css";
 
-const Modal = ({ modalHandler, changeHandler, setModal, setSecond }) => {
+const Modal = ({ modalHandler, changeHandler, setModal, setSecond ,timerHour, timerMinut, timerSecond}) => {
   let [hour, setHour] = useState("");
   let [minut, setMinut] = useState("");
 
@@ -14,12 +14,18 @@ const Modal = ({ modalHandler, changeHandler, setModal, setSecond }) => {
   const submitHandler = (e) => {
     e.preventDefault();
     if (hour >= 0 && minut >= 0) {
-      changeHandler(hour="0", minut="0");
-      setModal(false);
-      setSecond("59")
-    }
-    else{
-        alert(" 0 =< soat <=24  va  0 =< minut <= 60 bo'lishi kerak")
+      if (hour && minut) {
+        changeHandler(hour, minut);
+        setModal(false);
+        setSecond("59");
+      }
+      else{
+        changeHandler(Number(timerHour), timerMinut);
+        setSecond(timerSecond);
+        setModal(false);
+      }
+    } else {
+      alert(" 0 =< soat <=24  va  0 =< minut <= 60 bo'lishi kerak");
     }
   };
 

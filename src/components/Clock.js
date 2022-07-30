@@ -16,9 +16,11 @@ const Clock = ({ timerHour, timerMinut, timerSecond, changeHandler, playHas, has
     e.preventDefault()
     if(modal){
       setModal(false)
+      hasPlay(true)
     }
     else{
       setModal(true)
+      hasPlay(false)
     }
   }
   return (
@@ -63,7 +65,7 @@ const Clock = ({ timerHour, timerMinut, timerSecond, changeHandler, playHas, has
           </button>
         </section>
       </section>
-      {modal && <Modal modalHandler={modalHandler} setModal={setModal} changeHandler={changeHandler} setSecond={setSecond}/>}
+      {modal && <Modal modalHandler={modalHandler} timerHour={timerHour}  timerMinut={timerMinut} timerSecond={timerSecond} setModal={setModal} changeHandler={changeHandler} setSecond={setSecond}/>}
     </>
   );
 };
